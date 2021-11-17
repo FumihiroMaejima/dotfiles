@@ -1,0 +1,40 @@
+# .zsh_profile
+
+# .zshrcの実行
+if [ -f ~/.zshrc ]; then
+	. ~/.zshrc
+fi
+
+# nvm設定
+[[ -s ~/.nvm/nvm.sh ]] && . ~/.nvm/nvm.sh
+# nvm use default
+nvm use stable
+
+
+# for PHP
+export PATH="/usr/local/opt/apr/bin:$PATH"
+
+# for composer install
+alias composer="php -d memory_limit=-1 /usr/local/bin/composer"
+
+# for GoEnv
+# export GOENV_ROOT="$HOME/.goenv"
+# export PATH="$GOENV_ROOT/bin:$PATH"
+# eval "$(goenv init -)"
+
+# for Golang
+# export PATH="$GOROOT/bin/$PATH"
+# export PATH="$PATH:$GOPATH/bin"
+
+# for Rust
+# source "$HOME/.cargo/env"
+
+# pyenv v2
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
+
+# aws-cli default profile
+# export AWS_PROFILE=profile_name
+
+
