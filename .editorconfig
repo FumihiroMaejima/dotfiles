@@ -17,6 +17,9 @@ trim_trailing_whitespace = false
 [*.sh]
 indent_size = 2
 
+[*.zsh]
+indent_size = 2
+
 [*.yml]
 indent_size = 2
 
