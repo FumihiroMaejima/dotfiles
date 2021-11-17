@@ -13,6 +13,6 @@ export NODE_PATH=_modules:$HOME/.nvm/versions/node/${NODE_VERSION}/lib/node_modu
 eval "$(pyenv init -)"
 
 # for Rust
-source "$HOME/.cargo/env"
+# source "$HOME/.cargo/env"
 
 
