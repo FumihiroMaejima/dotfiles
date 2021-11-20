@@ -1,4 +1,7 @@
-# .zsh_profile
+# .zprofile
+
+# homebrew setting
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # .zshrcの実行
 if [ -f ~/.zshrc ]; then
@@ -11,8 +14,8 @@ fi
 nvm use stable
 
 
-# for PHP
-export PATH="/usr/local/opt/apr/bin:$PATH"
+# for PHP(m1では不要の可能性)
+# export PATH="/usr/local/opt/apr/bin:$PATH"
 
 # for composer install
 alias composer="php -d memory_limit=-1 /usr/local/bin/composer"
@@ -36,5 +39,3 @@ eval "$(pyenv init --path)"
 
 # aws-cli default profile
 # export AWS_PROFILE=profile_name
-
-
