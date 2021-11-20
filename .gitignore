@@ -56,3 +56,10 @@ pnpm-debug.log*
 # directories
 /.ssh/*
 /.aws/*
+
+
+# production files
+.bash_profile
+.bashrc
+.zprofile
+.zshrc
