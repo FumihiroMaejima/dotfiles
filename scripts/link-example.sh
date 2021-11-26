@@ -8,7 +8,7 @@ dotfiles=(
 .bashrc
 .bashsh_profile
 .zshrc
-.zsh_profile
+.zprofile
 .huskyrc
 .tmux.conf
 )
