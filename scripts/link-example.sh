@@ -1,5 +1,6 @@
 #!/bin/sh
 
+# CURRENT_DIR=$(cd $(dirname $0); pwd)
 SEPARATOPION='---------------------------'
 
 # ホームディレクトリに配置予定の設定ファイル
@@ -24,7 +25,7 @@ for file in "${dotfiles[@]}"; do
   ln -svf ../$file ~/
 done
 
-# 現在のDocker コンテナの状態を出力
+# 現在のホームディレクトリのdotfilesの状態を出力
 showMessage 'Current doffiles status'
 echo ${SEPARATOPION}
 ls -la ~/
