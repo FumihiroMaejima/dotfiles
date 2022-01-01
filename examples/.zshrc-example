@@ -15,4 +15,7 @@ eval "$(pyenv init -)"
 # for Rust
 # source "$HOME/.cargo/env"
 
+# for GLOB setting
+setopt nonomatch
+
 
