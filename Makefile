@@ -15,3 +15,9 @@ unlink:
 ##############################
 source:
 	sh ./scripts/source.sh
+
+##############################
+# change PHP version
+##############################
+change-php:
+	sh ./scripts/change-php-version.sh
