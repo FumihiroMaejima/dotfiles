@@ -14,6 +14,9 @@ showMessage() {
 
 # unlink
 showMessage 'Unlink Current Symbolic Link'
+unlink /opt/homebrew/bin/pear
+unlink /opt/homebrew/bin/peardev
+unlink /opt/homebrew/bin/pecl
 unlink /opt/homebrew/bin/phar
 unlink /opt/homebrew/bin/phar.phar
 unlink /opt/homebrew/bin/php
@@ -25,6 +28,9 @@ unlink /opt/homebrew/sbin/php-fpm
 
 # make symbolic link
 showMessage `make Symbolic Link of PHP ${PHP_FULL_VERSION}`
+ln -svf /opt/homebrew/Cellar/${PHP_MAJOR_VERSION}/${PHP_FULL_VERSION}/bin/pear /opt/homebrew/bin/pear
+ln -svf /opt/homebrew/Cellar/${PHP_MAJOR_VERSION}/${PHP_FULL_VERSION}/bin/peardev /opt/homebrew/bin/peardev
+ln -svf /opt/homebrew/Cellar/${PHP_MAJOR_VERSION}/${PHP_FULL_VERSION}/bin/pecl /opt/homebrew/bin/pecl
 ln -svf /opt/homebrew/Cellar/${PHP_MAJOR_VERSION}/${PHP_FULL_VERSION}/bin/phar /opt/homebrew/bin/phar
 ln -svf /opt/homebrew/Cellar/${PHP_MAJOR_VERSION}/${PHP_FULL_VERSION}/bin/phar.phar /opt/homebrew/bin/phar.phar
 ln -svf /opt/homebrew/Cellar/${PHP_MAJOR_VERSION}/${PHP_FULL_VERSION}/bin/php /opt/homebrew/bin/php
