@@ -12,33 +12,43 @@ showMessage() {
   echo $1
 }
 
+binPackages=(
+pear
+peardev
+pecl
+phar
+phar.phar
+php
+php-cgi
+php-config
+phpdbg
+phpize
+)
+
+sbinPackages=(
+php-fpm
+)
+
 # unlink
 showMessage 'Unlink Current Symbolic Link'
-unlink /opt/homebrew/bin/pear
-unlink /opt/homebrew/bin/peardev
-unlink /opt/homebrew/bin/pecl
-unlink /opt/homebrew/bin/phar
-unlink /opt/homebrew/bin/phar.phar
-unlink /opt/homebrew/bin/php
-unlink /opt/homebrew/bin/php-cgi
-unlink /opt/homebrew/bin/php-config
-unlink /opt/homebrew/bin/phpdbg
-unlink /opt/homebrew/bin/phpize
-unlink /opt/homebrew/sbin/php-fpm
+for item in "${binPackages[@]}"; do
+  unlink /opt/homebrew/bin/$item
+done
 
-# make symbolic link
+for item in "${sbinPackages[@]}"; do
+  unlink /opt/homebrew/sbin/$item
+done
+
+# make link
 showMessage `make Symbolic Link of PHP ${PHP_FULL_VERSION}`
-ln -svf /opt/homebrew/Cellar/${PHP_MAJOR_VERSION}/${PHP_FULL_VERSION}/bin/pear /opt/homebrew/bin/pear
-ln -svf /opt/homebrew/Cellar/${PHP_MAJOR_VERSION}/${PHP_FULL_VERSION}/bin/peardev /opt/homebrew/bin/peardev
-ln -svf /opt/homebrew/Cellar/${PHP_MAJOR_VERSION}/${PHP_FULL_VERSION}/bin/pecl /opt/homebrew/bin/pecl
-ln -svf /opt/homebrew/Cellar/${PHP_MAJOR_VERSION}/${PHP_FULL_VERSION}/bin/phar /opt/homebrew/bin/phar
-ln -svf /opt/homebrew/Cellar/${PHP_MAJOR_VERSION}/${PHP_FULL_VERSION}/bin/phar.phar /opt/homebrew/bin/phar.phar
-ln -svf /opt/homebrew/Cellar/${PHP_MAJOR_VERSION}/${PHP_FULL_VERSION}/bin/php /opt/homebrew/bin/php
-ln -svf /opt/homebrew/Cellar/${PHP_MAJOR_VERSION}/${PHP_FULL_VERSION}/bin/php-cgi /opt/homebrew/bin/php-cgi
-ln -svf /opt/homebrew/Cellar/${PHP_MAJOR_VERSION}/${PHP_FULL_VERSION}/bin/php-config /opt/homebrew/bin/php-config
-ln -svf /opt/homebrew/Cellar/${PHP_MAJOR_VERSION}/${PHP_FULL_VERSION}/bin/phpdbg /opt/homebrew/bin/phpdbg
-ln -svf /opt/homebrew/Cellar/${PHP_MAJOR_VERSION}/${PHP_FULL_VERSION}/bin/phpize /opt/homebrew/bin/phpize
-ln -svf /opt/homebrew/Cellar/${PHP_MAJOR_VERSION}/${PHP_FULL_VERSION}/sbin/php-fpm /opt/homebrew/sbin/php-fpm
+for item in "${binPackages[@]}"; do
+  ln -svf /opt/homebrew/Cellar/${PHP_MAJOR_VERSION}/${PHP_FULL_VERSION}/bin/$item /opt/homebrew/bin/$item
+done
+
+for item in "${sbinPackages[@]}"; do
+  ln -svf /opt/homebrew/Cellar/${PHP_MAJOR_VERSION}/${PHP_FULL_VERSION}/sbin/$item /opt/homebrew/sbin/$item
+done
+
 
 # restart
 showMessage 'Restert PHP Service'
