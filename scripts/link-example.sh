@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# CURRENT_DIR=$(cd $(dirname $0); pwd)
+CURRENT_DIR=$(cd $(dirname $0); pwd)
 SEPARATOPION='---------------------------'
 
 # ホームディレクトリに配置予定の設定ファイル
@@ -22,7 +22,8 @@ showMessage 'make dotfiles symbolic link.'
 
 # -f force リンクファイルと同じ名前のファイルがあっても強制的に上書きする
 for file in "${dotfiles[@]}"; do
-  ln -svf ../$file ~/
+  # ln -svf ../$file ~/
+  ln -svf ${CURRENT_DIR}/../$file ~/
 done
 
 # 現在のホームディレクトリのdotfilesの状態を出力
