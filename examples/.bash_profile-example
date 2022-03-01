@@ -11,7 +11,7 @@ fi
 nvm use stable
 
 
-# for PHP
+# for PHP(homebrew)
 export PATH="/usr/local/opt/apr/bin:$PATH"
 
 # for composer install
