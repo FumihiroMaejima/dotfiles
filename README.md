@@ -59,9 +59,12 @@ $ cp $HOME/.vimrc $HOME/path/dotfiles/
 
 - `-s` ハードリンクの代わりにシンボリックリンクを作成する
 - `-v` 経過を表示する
+- `-f` force,強制的に実行
 
 ```shell-session
 ln -sv ~/path/dotfiles/.bashrc ~/
+# or
+ln -svf ~/path/dotfiles/.bashrc ~/
 
 ls -la ~/
 ```
