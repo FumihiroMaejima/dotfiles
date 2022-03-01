@@ -5,7 +5,7 @@ SEPARATOPION='---------------------------'
 # 有効化予定の設定ファイル
 dotfiles=(
 .bashrc
-.bashsh_profile
+.bash_profile
 .zshrc
 .zprofile
 .huskyrc
