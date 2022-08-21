@@ -1,7 +1,7 @@
 #!/bin/sh
 
 CURRENT_DIR=$(cd $(dirname $0); pwd)
-SEPARATOPION='---------------------------'
+DELIMITER_LINE='------------------------------------------------------'
 
 # ホームディレクトリに配置予定の設定ファイル
 dotfiles=(
@@ -14,7 +14,7 @@ dotfiles=(
 )
 
 showMessage() {
-  echo ${SEPARATOPION}
+  echo ${DELIMITER_LINE}
   echo $1
 }
 
@@ -28,7 +28,7 @@ done
 
 # 現在のホームディレクトリのdotfilesの状態を出力
 showMessage 'Current doffiles status'
-echo ${SEPARATOPION}
+echo ${DELIMITER_LINE}
 ls -la ~/
-echo ${SEPARATOPION}
+echo ${DELIMITER_LINE}
 

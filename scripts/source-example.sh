@@ -1,6 +1,6 @@
 #!/bin/sh
 
-SEPARATOPION='---------------------------'
+DELIMITER_LINE='------------------------------------------------------'
 
 # 有効化予定の設定ファイル
 dotfiles=(
@@ -13,7 +13,7 @@ dotfiles=(
 )
 
 showMessage() {
-  echo ${SEPARATOPION}
+  echo ${DELIMITER_LINE}
   echo $1
 }
 
@@ -25,7 +25,7 @@ done
 
 # 現在のホームディレクトリのdotfilesの状態を出力
 showMessage 'Current doffiles status'
-echo ${SEPARATOPION}
+echo ${DELIMITER_LINE}
 ls -la ~/
-echo ${SEPARATOPION}
+echo ${DELIMITER_LINE}
 
