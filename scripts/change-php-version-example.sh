@@ -1,14 +1,19 @@
 #!/bin/sh
 
 # CURRENT_DIR=$(cd $(dirname $0); pwd)
-SEPARATOPION='---------------------------'
+DELIMITER_LINE='------------------------------------------------------'
+
+# php関連のbinaryがどこから、どのバージョンを参照しているかは下記で確認出来る。
+# ls -al /opt/homebrew/bin/ | grep php
+# ls -al /opt/homebrew/sbin/ | grep php
+
 # Latest の場合は`php`のみとなる。
 # PHP_MAJOR_VERSION='php'
 PHP_MAJOR_VERSION='php@8.0'
 PHP_FULL_VERSION='8.0.15'
 
 showMessage() {
-  echo ${SEPARATOPION}
+  echo ${DELIMITER_LINE}
   echo $1
 }
 

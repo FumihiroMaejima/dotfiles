@@ -79,6 +79,22 @@ $ unlink ~/.bashrc
 
 ---
 
+# PostManのファイルディレクトリのシンボリックリンクの作成
+
+PostManでファイルアップロードをする場合は専用のディレクトリに画像を格納する必要がある。
+
+```shell-session
+ln -svf /Users/userName/Postman/files ~/Desktop/sampleFiles
+/Users/userName/Desktop/sampleFiles/files -> /Users/userName/Postman/files
+
+```
+
+```shell-session
+unlink ~/Desktop/sampleFiles/files
+```
+
+---
+
 # 構成
 
 ```shell-session
