@@ -1,3 +1,6 @@
+.PHONY: help
+.DEFAULT_GOAL := help
+
 ##############################
 # make symbolic link
 ##############################
@@ -20,4 +23,16 @@ source:
 # change PHP version
 ##############################
 change-php:
-	sh ./scripts/change-php-version.sh
+	sh ./scripts/dev/change-php-version.sh
+
+##############################
+# Update Node.Js version
+##############################
+update-node:
+	sh ./scripts/dev/install-node-package.sh
+
+##############################
+# etc
+##############################
+help:
+	@cat Makefile

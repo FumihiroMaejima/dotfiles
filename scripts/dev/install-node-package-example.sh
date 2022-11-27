@@ -10,7 +10,7 @@ ZPROFILE_FILE_NAME='.zprofile'
 NVM_DIR=$HOME/.nvm;
 
 changeNodeVersion() {
-  cd ${CURRENT_DIR}/.. && \
+  cd ${CURRENT_DIR}/../.. && \
   sed -i -e "s/^NODE_VERSION=v$1$/NODE_VERSION=v$2/g" ${ZPROFILE_FILE_NAME} && \
   rm -rf ${ZPROFILE_FILE_NAME}-e
 }

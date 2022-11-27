@@ -18,7 +18,7 @@ fi
 
 goenv install "$(TRGET_GOLANG_VERSION)"
 
-cp -rf $HOME/.goenv/versions/${TRGET_GOLANG_VERSION} ~/go/
+cp -rf $HOME/.goenv/versions/${TRGET_GOLANG_VERSION} $HOME/go/
 
 source $HOME/.zprofile
 source $HOME/.zshrc
