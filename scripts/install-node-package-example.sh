@@ -5,9 +5,8 @@ DELIMITER_LINE='------------------------------------------------------'
 
 # Check target golang version by goenv
 PRE_NODE_VERSION='18.7.0'
-TRGET_NODE_VERSION='18.12.0'
+TARGET_NODE_VERSION='18.12.0'
 ZSHRC_FILE_NAME='.zshrc'
-NODE_VERSION
 
 changeNodeVersion() {
   cd ${CURRENT_DIR}/.. && \
@@ -26,13 +25,13 @@ changeNodeVersion() {
 # nvm ls-remote
 
 # nodeのインストール
-nvm install "$(TRGET_NODE_VERSION)"
-nvm use "$(TRGET_NODE_VERSION)"
+nvm install "$(TARGET_NODE_VERSION)"
+nvm use "$(TARGET_NODE_VERSION)"
 
 # .zprofileへの反映(.zshrcでも良い)
-# echo 'export NODE_PATH=_modules:"$HOME"/.nvm/versions/node/"$TRGET_NODE_VERSION"/lib/node_modules' >> ~/.zprofile
+# echo 'export NODE_PATH=_modules:"$HOME"/.nvm/versions/node/"$TARGET_NODE_VERSION"/lib/node_modules' >> ~/.zprofile
 
-changeNodeVersion $(PRE_NODE_VERSION) $(TRGET_NODE_VERSION)
+changeNodeVersion $(PRE_NODE_VERSION) $(TARGET_NODE_VERSION)
 source $HOME/.zshrc
 
 # パッケージのインストール
