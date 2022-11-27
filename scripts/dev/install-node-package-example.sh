@@ -15,7 +15,7 @@ changeNodeVersion() {
   rm -rf ${ZPROFILE_FILE_NAME}-e
 }
 
-# nvmのインストール
+# nvmのインストール(インストール済みなら不要)
 # git clone https://github.com/creationix/nvm.git $HOME/.nvm
 # source $HOME/.nvm/nvm.sh
 # vim $HOME/.zprofile
@@ -32,7 +32,7 @@ source $NVM_DIR/nvm.sh;
 nvm install "$TARGET_NODE_VERSION"
 nvm use "$TARGET_NODE_VERSION"
 
-# .zprofileへの反映
+# .zprofileへの反映(設定済みなら不要)
 # echo 'export NODE_PATH=_modules:"$HOME"/.nvm/versions/node/"$TARGET_NODE_VERSION"/lib/node_modules' >> ~/.zprofile
 
 changeNodeVersion "$PRE_NODE_VERSION" "$TARGET_NODE_VERSION"
