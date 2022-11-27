@@ -13,6 +13,9 @@ fi
 # nvm use default
 nvm use stable
 
+# Node.js
+NODE_VERSION=v16.13.0
+export NODE_PATH=_modules:$HOME/.nvm/versions/node/${NODE_VERSION}/lib/node_modules
 
 # for PHP(m1では不要の可能性)
 # export PATH="/usr/local/opt/apr/bin:$PATH"
