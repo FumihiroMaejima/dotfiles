@@ -1,10 +1,19 @@
 #!/bin/sh
 
-# CURRENT_DIR=$(cd $(dirname $0); pwd)
+CURRENT_DIR=$(cd $(dirname $0); pwd)
 DELIMITER_LINE='------------------------------------------------------'
 
 # Check target golang version by goenv
-TRGET_NODE_VERSION='18.7.0'
+PRE_NODE_VERSION='18.7.0'
+TRGET_NODE_VERSION='18.12.0'
+ZSHRC_FILE_NAME='.zshrc'
+NODE_VERSION
+
+changeNodeVersion() {
+  cd ${CURRENT_DIR}/.. && \
+  sed -i -e "s/^NODE_VERSION=$1$/NODE_VERSION=$2/g" ${ZSHRC_FILE_NAME} && \
+  rm -rf ${ZSHRC_FILE_NAME}-e
+}
 
 # nvmのインストール
 # git clone https://github.com/creationix/nvm.git $HOME/.nvm
@@ -20,8 +29,10 @@ TRGET_NODE_VERSION='18.7.0'
 nvm install "$(TRGET_NODE_VERSION)"
 nvm use "$(TRGET_NODE_VERSION)"
 
-# .zprofileへの反映
-echo 'export NODE_PATH=_modules:"$HOME"/.nvm/versions/node/"$TRGET_NODE_VERSION"/lib/node_modules' >> ~/.zprofile
+# .zprofileへの反映(.zshrcでも良い)
+# echo 'export NODE_PATH=_modules:"$HOME"/.nvm/versions/node/"$TRGET_NODE_VERSION"/lib/node_modules' >> ~/.zprofile
+
+changeNodeVersion $(PRE_NODE_VERSION) $(TRGET_NODE_VERSION)
 source $HOME/.zshrc
 
 # パッケージのインストール
