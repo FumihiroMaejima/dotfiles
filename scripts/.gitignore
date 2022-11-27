@@ -3,3 +3,4 @@ link.sh
 unlink.sh
 source.sh
 install-golang-by-goenv.sh
+install-node-package.sh

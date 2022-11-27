@@ -1,9 +1,5 @@
 # .zshrc
 
-# Node.js
-NODE_VERSION=v16.13.0
-export NODE_PATH=_modules:$HOME/.nvm/versions/node/${NODE_VERSION}/lib/node_modules
-
 # pyenv
 # export PYENV_ROOT="$HOME/.pyenv"
 # export PATH="$PYENV_ROOT/bin:$PATH"
