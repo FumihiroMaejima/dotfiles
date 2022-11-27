@@ -6,13 +6,13 @@ DELIMITER_LINE='------------------------------------------------------'
 # Check target golang version by goenv
 PRE_NODE_VERSION='18.7.0'
 TARGET_NODE_VERSION='18.12.0'
-ZSHRC_FILE_NAME='.zshrc'
+ZPROFILE_FILE_NAME='.zprofile'
 NVM_DIR=$HOME/.nvm;
 
 changeNodeVersion() {
   cd ${CURRENT_DIR}/.. && \
-  sed -i -e "s/^NODE_VERSION=v$1$/NODE_VERSION=v$2/g" ${ZSHRC_FILE_NAME} && \
-  rm -rf ${ZSHRC_FILE_NAME}-e
+  sed -i -e "s/^NODE_VERSION=v$1$/NODE_VERSION=v$2/g" ${ZPROFILE_FILE_NAME} && \
+  rm -rf ${ZPROFILE_FILE_NAME}-e
 }
 
 # nvmのインストール
@@ -32,7 +32,7 @@ source $NVM_DIR/nvm.sh;
 nvm install "$TARGET_NODE_VERSION"
 nvm use "$TARGET_NODE_VERSION"
 
-# .zprofileへの反映(.zshrcでも良い)
+# .zprofileへの反映
 # echo 'export NODE_PATH=_modules:"$HOME"/.nvm/versions/node/"$TARGET_NODE_VERSION"/lib/node_modules' >> ~/.zprofile
 
 changeNodeVersion "$PRE_NODE_VERSION" "$TARGET_NODE_VERSION"
