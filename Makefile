@@ -26,9 +26,9 @@ change-php:
 	sh ./scripts/dev/change-php-version.sh
 
 ##############################
-# Update Node.Js version
+# Update Node.Js version & install package
 ##############################
-update-node:
+install-node:
 	sh ./scripts/dev/install-node-package.sh
 
 ##############################
