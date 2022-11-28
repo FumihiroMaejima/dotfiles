@@ -39,4 +39,4 @@ changeNodeVersion "$PRE_NODE_VERSION" "$TARGET_NODE_VERSION"
 source $HOME/.zprofile
 
 # パッケージのインストール(vの接頭辞をつける)
-$HOME/.nvm/versions/node/v$TARGET_NODE_VERSION/bin/npm install -g yarn typescript create-react-app @aws-amplify/cli
+$HOME/.nvm/versions/node/v$TARGET_NODE_VERSION/bin/npm install -g yarn typescript create-react-app @aws-amplify/cli aws-cdk
