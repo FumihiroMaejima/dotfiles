@@ -32,6 +32,12 @@ install-node:
 	sh ./scripts/dev/install-node-package.sh
 
 ##############################
+# install pyenv & python
+##############################
+install-pyenv:
+	sh ./scripts/dev/install-pyenv.sh
+
+##############################
 # etc
 ##############################
 help:
