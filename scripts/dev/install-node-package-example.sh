@@ -3,7 +3,7 @@
 CURRENT_DIR=$(cd $(dirname $0); pwd)
 DELIMITER_LINE='------------------------------------------------------'
 
-# Check target golang version by goenv
+# Check target version
 PRE_NODE_VERSION='18.7.0'
 TARGET_NODE_VERSION='18.12.0'
 PROFILE_FILE_NAME='.zprofile'
