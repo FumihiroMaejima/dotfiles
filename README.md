@@ -2,6 +2,12 @@
 
 ローカル環境用のdotfiles
 
+# 現在設定されているシェルの確認
+
+```shell-session
+$ echo $SHELL
+/bin/zsh
+```
 
 # shellsの確認
 
