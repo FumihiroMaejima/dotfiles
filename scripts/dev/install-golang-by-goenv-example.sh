@@ -30,6 +30,9 @@ goenv global "$TRGET_GOLANG_VERSION"
 # WARING 反映させるにはシェルの再起動が必要
 $HOME/go/${TRGET_GOLANG_VERSION}/bin/go version
 
+### echo $GOPATH
+echo $GOPATH
+
 # 反映確認後に下記のコマンドを実行すること。
 # go env -w GO111MODULE=on
 # go env GO111MODULE
