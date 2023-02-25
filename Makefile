@@ -38,6 +38,15 @@ install-pyenv:
 	sh ./scripts/dev/install-pyenv.sh
 
 ##############################
+# Update Goenv version & install Golang
+##############################
+update-goenv:
+	sh ./scripts/dev/update-goenv-version.sh
+
+install-golang:
+	sh ./scripts/dev/install-golang-by-goenv.sh
+
+##############################
 # etc
 ##############################
 help:
