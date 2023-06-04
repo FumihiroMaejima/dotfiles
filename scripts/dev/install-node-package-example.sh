@@ -3,6 +3,12 @@
 CURRENT_DIR=$(cd $(dirname $0); pwd)
 DELIMITER_LINE='------------------------------------------------------'
 
+# How To Use
+# 1. Check Node Version By `nvm ls-remote`.
+# 2. Set Current Node Version To PRE_NODE_VERSION.
+# 3. Set New Node Version You Want To TARGET_NODE_VERSION.
+# 4. Execute This Script.
+
 # Check target version
 PRE_NODE_VERSION='18.7.0'
 TARGET_NODE_VERSION='18.12.0'
@@ -15,7 +21,7 @@ changeNodeVersion() {
   rm -rf ${PROFILE_FILE_NAME}-e
 }
 
-# nvmのインストール(インストール済みなら不要)
+# nvmのインストール(インストール済みなら不要。nvmを更新したい場合は実行。)
 # git clone https://github.com/creationix/nvm.git $HOME/.nvm
 # source $HOME/.nvm/nvm.sh
 # vim $HOME/.zprofile
