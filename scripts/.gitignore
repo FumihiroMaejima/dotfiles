@@ -5,3 +5,4 @@ source.sh
 install-golang-by-goenv.sh
 install-node-package.sh
 install-pyenv.sh
+update-composer.sh
