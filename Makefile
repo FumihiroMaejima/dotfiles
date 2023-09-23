@@ -25,6 +25,9 @@ source:
 change-php:
 	sh ./scripts/dev/change-php-version.sh
 
+update-composer:
+	sh ./scripts/dev/update-composer.sh
+
 ##############################
 # Update Node.Js version & install package
 ##############################
