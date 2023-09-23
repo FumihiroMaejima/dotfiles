@@ -3,19 +3,25 @@
 CURRENT_DIR=$(cd $(dirname $0); pwd)
 DELIMITER_LINE='------------------------------------------------------'
 
-# Check target golang version by goenv
+# How To Use
+# 1. Check Node Version By `nvm ls-remote`.
+# 2. Set Current Node Version To PRE_NODE_VERSION.
+# 3. Set New Node Version You Want To TARGET_NODE_VERSION.
+# 4. Execute This Script.
+
+# Check target version
 PRE_NODE_VERSION='18.7.0'
 TARGET_NODE_VERSION='18.12.0'
-ZPROFILE_FILE_NAME='.zprofile'
+PROFILE_FILE_NAME='.zprofile'
 NVM_DIR=$HOME/.nvm;
 
 changeNodeVersion() {
   cd ${CURRENT_DIR}/../.. && \
-  sed -i -e "s/^NODE_VERSION=v$1$/NODE_VERSION=v$2/g" ${ZPROFILE_FILE_NAME} && \
-  rm -rf ${ZPROFILE_FILE_NAME}-e
+  sed -i -e "s/^NODE_VERSION=v$1$/NODE_VERSION=v$2/g" ${PROFILE_FILE_NAME} && \
+  rm -rf ${PROFILE_FILE_NAME}-e
 }
 
-# nvmのインストール(インストール済みなら不要)
+# nvmのインストール(インストール済みなら不要。nvmを更新したい場合は実行。)
 # git clone https://github.com/creationix/nvm.git $HOME/.nvm
 # source $HOME/.nvm/nvm.sh
 # vim $HOME/.zprofile
@@ -32,11 +38,11 @@ source $NVM_DIR/nvm.sh;
 nvm install "$TARGET_NODE_VERSION"
 nvm use "$TARGET_NODE_VERSION"
 
-# .zprofileへの反映(設定済みなら不要)
-# echo 'export NODE_PATH=_modules:"$HOME"/.nvm/versions/node/"$TARGET_NODE_VERSION"/lib/node_modules' >> ~/.zprofile
+# profileへの反映(設定済みなら不要)
+# echo 'export NODE_PATH=_modules:$HOME/.nvm/versions/node/"$TARGET_NODE_VERSION"/lib/node_modules' >> $HOME/"$PROFILE_FILE_NAME"
 
 changeNodeVersion "$PRE_NODE_VERSION" "$TARGET_NODE_VERSION"
-source $HOME/.zprofile
+source $HOME/"$PROFILE_FILE_NAME"
 
 # パッケージのインストール(vの接頭辞をつける)
-$HOME/.nvm/versions/node/v$TARGET_NODE_VERSION/bin/npm install -g yarn typescript create-react-app @aws-amplify/cli
+$HOME/.nvm/versions/node/v$TARGET_NODE_VERSION/bin/npm install -g yarn typescript create-react-app @aws-amplify/cli aws-cdk @google/clasp
