@@ -2,6 +2,14 @@
 
 ローカル環境用のdotfiles
 
+# 現在設定されているシェルの確認
+
+* Alpine LinuxのDockerコンテナでは値が設定されていない為注意。
+
+```shell-session
+$ echo $SHELL
+/bin/zsh
+```
 
 # shellsの確認
 
