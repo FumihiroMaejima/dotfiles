@@ -23,31 +23,31 @@ source:
 # change PHP version
 ##############################
 change-php:
-	sh ./scripts/dev/change-php-version.sh
+	sh ./scripts/dev/php/change-php-version.sh
 
 update-composer:
-	sh ./scripts/dev/update-composer.sh
+	sh ./scripts/dev/php/update-composer.sh
 
 ##############################
 # Update Node.Js version & install package
 ##############################
 install-node:
-	sh ./scripts/dev/install-node-package.sh
+	sh ./scripts/dev/js/install-node-package.sh
 
 ##############################
 # install pyenv & python
 ##############################
 install-pyenv:
-	sh ./scripts/dev/install-pyenv.sh
+	sh ./scripts/dev/python/install-pyenv.sh
 
 ##############################
 # Update Goenv version & install Golang
 ##############################
 update-goenv:
-	sh ./scripts/dev/update-goenv-version.sh
+	sh ./scripts/dev/go/update-goenv-version.sh
 
 install-golang:
-	sh ./scripts/dev/install-golang-by-goenv.sh
+	sh ./scripts/dev/go/install-golang-by-goenv.sh
 
 ##############################
 # etc
