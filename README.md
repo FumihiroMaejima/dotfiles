@@ -6,14 +6,14 @@
 
 * Alpine LinuxのDockerコンテナでは値が設定されていない為注意。
 
-```shell-session
+```session
 $ echo $SHELL
 /bin/zsh
 ```
 
 # shellsの確認
 
-```shell-session
+```session
 $ cat /etc/shells
 # List of acceptable shells for chpass(1).
 # Ftpd will not allow users to connect who are not using
@@ -28,8 +28,7 @@ $ cat /etc/shells
 /bin/zsh
 ```
 
-
-```shell-session
+```session
 $ which sh
 /bin/sh
 
@@ -44,7 +43,7 @@ $ which zsh
 
 # シェルの変更
 
-```shell-session
+```session
 chsh -s /bin/zsh
 ```
 
@@ -52,16 +51,15 @@ chsh -s /bin/zsh
 
 # ローカルのファイルをdotfilesリポジトリにコピーする場合
 
-```shell-session
-$ cp $HOME/.bash_profile $HOME/path/dotfiles/
-$ cp $HOME/.bashrc $HOME/path/dotfiles/
-$ cp $HOME/.huskyrc $HOME/path/dotfiles/
-$ cp $HOME/.tmux.conf $HOME/path/dotfiles/
-$ cp $HOME/.vimrc $HOME/path/dotfiles/
+```session
+cp $HOME/.bash_profile $HOME/path/dotfiles/
+cp $HOME/.bashrc $HOME/path/dotfiles/
+cp $HOME/.huskyrc $HOME/path/dotfiles/
+cp $HOME/.tmux.conf $HOME/path/dotfiles/
+cp $HOME/.vimrc $HOME/path/dotfiles/
 ```
 
 ---
-
 
 # HOMEディレクトリ直下にdotfilesの設定ファイルのシンボリックリンクを作成する
 
@@ -69,7 +67,7 @@ $ cp $HOME/.vimrc $HOME/path/dotfiles/
 - `-v` 経過を表示する
 - `-f` force,強制的に実行
 
-```shell-session
+```session
 ln -sv ~/path/dotfiles/.bashrc ~/
 # or
 ln -svf ~/path/dotfiles/.bashrc ~/
@@ -81,8 +79,8 @@ ls -la ~/
 
 # シンボリックリンクの削除
 
-```shell-session
-$ unlink ~/.bashrc
+```session
+unlink ~/.bashrc
 ```
 
 ---
@@ -91,13 +89,13 @@ $ unlink ~/.bashrc
 
 PostManでファイルアップロードをする場合は専用のディレクトリに画像を格納する必要がある。
 
-```shell-session
+```session
 ln -svf /Users/userName/Postman/files ~/Desktop/sampleFiles
 /Users/userName/Desktop/sampleFiles/files -> /Users/userName/Postman/files
 
 ```
 
-```shell-session
+```session
 unlink ~/Desktop/sampleFiles/files
 ```
 
@@ -105,10 +103,8 @@ unlink ~/Desktop/sampleFiles/files
 
 # 構成
 
-```shell-session
+```session
 
 ```
 
 ---
-
-
