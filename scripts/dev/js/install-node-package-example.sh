@@ -34,6 +34,9 @@ source $NVM_DIR/nvm.sh;
 # インストールするバージョンの確認
 # nvm ls-remote
 
+# 現在のNode.jsのバージョンでインストールしているパッケージの確認
+ls $HOME/.nvm/versions/node/v$PRE_NODE_VERSION/bin
+
 # nodeのインストール
 nvm install "$TARGET_NODE_VERSION"
 nvm use "$TARGET_NODE_VERSION"
