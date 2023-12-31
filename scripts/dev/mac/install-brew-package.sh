@@ -11,7 +11,7 @@ function installPhp() {
 }
 
 
-# installPhp
+# install brew package
 brew install openssl
 brew install git-flow
 brew install jq
