@@ -43,6 +43,9 @@ fi
 # $HOME/.configに設定を追加
 ln -svf ~/dev/dotfiles/scripts/dev/nvim $HOME/.config/
 
+# 下記で現在のconfigのパスの設定を確認出来る
+# :echo stdpath('config')
+
 settingProfile
 
 ##############################
