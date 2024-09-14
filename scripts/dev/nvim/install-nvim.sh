@@ -1,5 +1,6 @@
 #!/bin/sh
 
+# CURRENT_DIR=$(cd $(dirname $0); pwd)
 function settingProfile() {
   ### .zprofileに設定を反映(設定済みなら不要)
   # echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> $HOME/.zprofile
@@ -38,6 +39,9 @@ else
   echo "No Target uname: " . $(uname -m)
   exit
 fi
+
+# $HOME/.configに設定を追加
+ln -svf ~/dev/dotfiles/scripts/dev/nvim $HOME/.config/
 
 settingProfile
 
