@@ -46,5 +46,8 @@ settingProfile
 # type :checkhealt           #
 # type :q                    #
 # type :help                 #
+# ----------                 #
+# #command line              #
+# nvim -h                    #
 ##############################
 
