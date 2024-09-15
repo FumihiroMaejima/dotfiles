@@ -48,6 +48,9 @@ ln -svf ~/dev/dotfiles/scripts/dev/nvim $HOME/.config/
 
 settingProfile
 
+# 下記でnvim上でluaのスクリプトを実行出来る
+# :lua print("hello world")
+
 ##############################
 # type :help nvim            #
 # type :checkhealt           #
