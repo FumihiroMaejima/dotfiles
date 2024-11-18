@@ -27,7 +27,7 @@ git commit --amend
 
 ---
 
-# commitのリバート
+# commitのrevert
 
 指定したコミットIDのコミットをrevertする。
 
@@ -110,6 +110,24 @@ git remote set-url origin git@github.com:user_name/repository_name.git
 git remote -v
 origin  git@github.com:user_name/repository_name.git (fetch)
 origin  git@github.com:user_name/repository_name.git (push)
+
+```
+
+---
+
+# git flow
+
+
+```shell
+# init
+git flow init
+
+# feature branch
+git flow feature start branch-name
+# release
+git flow release start branch-name
+# hotfix
+git flow hotfix start branch-name
 
 ```
 
