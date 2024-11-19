@@ -4,7 +4,7 @@
 
 # Mac環境でアップグレードする方法
 
-```shell--sesshion
+```shell
 brew upgrade git
 ```
 
@@ -12,7 +12,7 @@ brew upgrade git
 
 # SSH経由でgithubリポジトリをclone
 
-```shell--sesshion
+```shell
 git clone git@github.com:accountName/RepositoryName.git
 ```
 ---
@@ -21,7 +21,7 @@ git clone git@github.com:accountName/RepositoryName.git
 
 コマンドを実行すると`vi`などで直前のコミットメッセージを修正出来る。
 
-```shell--sesshion
+```shell
 git commit --amend
 ```
 
@@ -31,7 +31,7 @@ git commit --amend
 
 指定したコミットIDのコミットをrevertする。
 
-```shell--sesshion
+```shell
 git revert --no-edit commitId
 ```
 
@@ -39,22 +39,23 @@ git revert --no-edit commitId
 
 # リモートリポジトリの最新の履歴の取得
 
-```shell--sesshion
-$ git fetch origin develop
+```shell
+git fetch origin develop
 ```
 
 ---
 
 # (ローカルに履歴として残っている)リモートで削除されているリモートブランチの削除
 
-```shell--sesshion
+```shell
 git remote prune prigin
 ```
+
 ---
 
 # リモートリポジトリの最新の履歴の取得
 
-```shell--sesshion
+```shell
 git fetch origin develop
 ```
 
@@ -64,33 +65,33 @@ git fetch origin develop
 リベースされる対象のブランチを最新にして、変更が無い状態で下記のコマンドを実行されるとrebaseが実行される。
 
 
-```shell--sesshion
+```shell
 git rebase develop
 ```
 
 競合がある場合、競合を解決した上で下記のコマンドを実行すると続きのrebase処理を実行してくれる。
 
-```shell--sesshion
+```shell
 git rebase --continue
 ```
 
 失敗したrebaseの取り消し
 
-```shell--sesshion
+```shell
 git rebase --aborts
 ```
 
 ---
 # check global config
 
-```shell--sesshion
+```shell
 git config --global -l
 ```
 
 ---
 # リモートリポジトリのURLチェック
 
-```shell--sesshion
+```shell
 git remote -v
 origin  https://github.com/user_name/repository_name (fetch)
 origin  https://github.com/user_name/repository_name (push)
@@ -100,7 +101,7 @@ origin  https://github.com/user_name/repository_name (push)
 
 # リモートリポジトリのURLの変更
 
-```shell--sesshion
+```shell
 git remote -v
 origin  https://github.com/user_name/repository_name (fetch)
 origin  https://github.com/user_name/repository_name (push)
@@ -119,6 +120,9 @@ origin  git@github.com:user_name/repository_name.git (push)
 
 
 ```shell
+# brew install
+brew install git-flow
+
 # init
 git flow init
 
