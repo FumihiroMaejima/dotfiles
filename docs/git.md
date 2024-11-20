@@ -83,9 +83,8 @@ git rebase develop
 git rebase --continue
 ```
 
-失敗したrebaseの取り消し
-
 ```shell
+# 失敗したrebaseの取り消し
 git rebase --aborts
 ```
 
@@ -106,6 +105,43 @@ git revert HEAD
 
 # 特定のコミットを削除する(ID指定)
 git revert testCommitId
+```
+
+---
+
+# squash merge(コマンド実行後に手動commitが必須)
+
+```shell
+git merge --squash feature/branch/name
+```
+
+---
+
+# 完了していないマージを中止
+
+```shell
+git merge --abort
+```
+
+---
+
+# merge commitのrevert
+
+```shell
+# -mオプションには1,2の値を指定する
+# 1=マージされた側のブランチ
+# 2=マージする側のブランチ
+# マージしたコミットそのものをrevertする時は1を指定する
+# コミットIDは直前のもので無くても良い
+git revert -m 1 testCommitID
+```
+
+---
+
+# ブランチのコミット履歴の確認
+
+```shell
+git log
 ```
 
 ---
