@@ -60,6 +60,14 @@ git fetch origin develop
 ```
 
 ---
+
+# チェックアウト
+
+```shell
+git checkout -b feature/branch-name-b feature/branch-name-a
+```
+
+---
 # rebase
 
 リベースされる対象のブランチを最新にして、変更が無い状態で下記のコマンドを実行されるとrebaseが実行される。
@@ -82,6 +90,26 @@ git rebase --aborts
 ```
 
 ---
+
+# ブランチ間のdiffをファイル出力
+
+```shell
+git diff feature/branch-name-a feature/branch-name-b > ./test.txt
+```
+
+---
+
+# 直前のコミットを削除(revert)
+
+```shell
+git revert HEAD
+
+# 特定のコミットを削除する(ID指定)
+git revert testCommitId
+```
+
+---
+
 # check global config
 
 ```shell
