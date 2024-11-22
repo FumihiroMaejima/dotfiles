@@ -88,12 +88,33 @@ git rebase --continue
 git rebase --aborts
 ```
 
+```shell
+# commitをまとめる
+git rebase -i HEAD~
+```
+
 ---
 
 # ブランチ間のdiffをファイル出力
 
 ```shell
 git diff feature/branch-name-a feature/branch-name-b > ./test.txt
+```
+
+---
+
+# 現在のブランチのコミット一覧
+
+```shell
+git log --online --first-parent
+```
+
+---
+
+# 直前のコミットの打ち消し
+
+```shell
+git reset --sort HEAD^
 ```
 
 ---
