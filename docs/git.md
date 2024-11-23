@@ -159,6 +159,19 @@ git revert -m 1 testCommitID
 
 ---
 
+# ローカルの作業ブランチを削除してしまった時
+
+```shell
+# 履歴の確認
+git reflog
+
+# 履歴のHEAD@{*}を参考に、branchをチェックアウトすると、復旧出来る。
+
+git branch feature/recover_target_banch HEAD@{1}
+```
+
+---
+
 # ブランチのコミット履歴の確認
 
 ```shell
