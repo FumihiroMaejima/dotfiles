@@ -22,3 +22,20 @@ brew install openssl
 brew install git-flow
 brew install jq
 
+# php
+brew install php@8.3
+echo 'export PATH="/usr/local/opt/apr/bin:$PATH"' >> ~/.zprofile
+echo 'alias composer="php -d memory_limit=-1 /usr/local/bin/composer"' >> ~/.zprofile
+brew services start php
+
+# nvm
+git clone https://github.com/creationix/nvm.git $HOME/.nvm
+source $HOME/.nvm/nvm.sh
+echo '[[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh' >> ~/.zprofile
+echo 'nvm use stable' >> ~/.zprofile
+source $HOME/.nvm/nvm.sh
+### node.js
+nvm install stable
+nvm use stable
+
+
