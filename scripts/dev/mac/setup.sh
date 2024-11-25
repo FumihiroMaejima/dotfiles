@@ -11,6 +11,9 @@ else
   source $HOME/.zprofile
 fi
 
+# Rosetta2
+softwareupdate --install-rosetta --agree-to-license
+
 # 利用するアプリケーション
 brew install --cask google-chrome
 brew install --cask slack
