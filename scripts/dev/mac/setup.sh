@@ -34,8 +34,25 @@ source $HOME/.nvm/nvm.sh
 echo '[[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh' >> ~/.zprofile
 echo 'nvm use stable' >> ~/.zprofile
 source $HOME/.nvm/nvm.sh
-### node.js
+## node.js
 nvm install stable
 nvm use stable
 
+# ssh
+# mkdir ~/.ssh
+# chmod 700 ~/.ssh
+# cd ~/.ssh
+# ssh-keygen -t rsa
+# chmod 400 ~/.ssh/id_rsa
+# chmod 400 ~/.ssh/id_rsa.pub
+# ssh-add ~/.ssh/id_rsa
+# touch ~/.ssh/config
+# chmod 600 ~/.ssh/config
+# ## ssh config
+# echo "Host github
+#   HostName github.com
+#   IdentityFile ~/.ssh/id_rsa
+#   User git
+#   Port 22" >> ~/.ssh/config
+# cd ~/
 
