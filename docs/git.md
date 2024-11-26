@@ -15,6 +15,23 @@ brew upgrade git
 ```shell
 git clone git@github.com:accountName/RepositoryName.git
 ```
+
+---
+
+# Git管理に追加
+
+```shell
+# 初期化
+git init
+
+# 変更のステージ
+git add -A
+git add .
+
+# コミット
+git commit -m "first commit"
+```
+
 ---
 
 # 直前のCommit メッセージの修正
@@ -57,6 +74,14 @@ git remote prune prigin
 
 ```shell
 git fetch origin develop
+```
+
+---
+
+# ブランチ一覧
+
+```shell
+git branch
 ```
 
 ---
