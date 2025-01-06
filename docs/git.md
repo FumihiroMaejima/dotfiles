@@ -65,7 +65,7 @@ git fetch origin develop
 # (ローカルに履歴として残っている)リモートで削除されているリモートブランチの削除
 
 ```shell
-git remote prune prigin
+git remote prune origin
 ```
 
 ---
