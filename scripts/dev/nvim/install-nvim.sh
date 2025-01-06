@@ -1,6 +1,7 @@
 #!/bin/sh
 
-# CURRENT_DIR=$(cd $(dirname $0); pwd)
+CURRENT_DIR=$(cd $(dirname $0); pwd)
+
 function settingProfile() {
   ### .zprofileに設定を反映(設定済みなら不要)
   # echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> $HOME/.zprofile
@@ -41,7 +42,7 @@ else
 fi
 
 # $HOME/.configに設定を追加
-ln -svf ~/dev/dotfiles/scripts/dev/nvim $HOME/.config/
+ln -svf $CURRENT_DIR $HOME/.config/
 
 # 下記で現在のconfigのパスの設定を確認出来る
 # :echo stdpath('config')
