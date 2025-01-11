@@ -253,6 +253,14 @@ git flow init
 git flow feature start branch-name
 # release
 git flow release start branch-name
+### 基準のブランチを指定してリリースブランチの作成
+git flow release start v1.0.0 develop
+### 全ての対応がマージされたらfinishを掛ける
+git flow release finish 'v1.0.0'
+#### 実行後に`main`,`develop`ブランチ両方にreleaseブランチがマージされる。
+#### タグはmain側に設定される。
+### releaseのpublishの実行
+git flow release publish v1.0.0
 # hotfix
 git flow hotfix start branch-name
 
