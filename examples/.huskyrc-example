@@ -2,3 +2,17 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 nvm use stable
 
+# echo "export PATH=\"$(dirname $(which npx)):\$PATH\"" > ~/.huskyrc
+# sourceTreeなど外部からgitを使う場合は以下も追加
+# echo "export PATH=\"$(dirname $(which yarn)):\$PATH\"" >> $HOME/.huskyrc
+
+# huskyの設定ファイルの反映方法
+### 複数階層のディレクトリを作成出来る
+# mkdir -p $HOME/.config/husky
+### ファイルを作成
+# touch $HOME/.config/husky/init.sh
+### 又は
+# ln -svf ~/path/dotfiles/.huskyrc $HOME/.config/husky/init.sh
+### リンクを削除
+# unlink $HOME/.config/husky/init.sh
+
