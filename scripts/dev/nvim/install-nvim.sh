@@ -9,6 +9,11 @@ function settingProfile() {
 }
 
 function settingProfileWithBash() {
+  # ファイルが無い場合
+  if [ ! -e $HOME/.bash_profile ]; then
+    touch $HOME/.bash_profile
+    chmod 755 $HOME/.bash_profile
+  fi
   source $HOME/.bash_profile
 }
 
