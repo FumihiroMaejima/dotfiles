@@ -51,6 +51,10 @@ else
 fi
 
 # $HOME/.configに設定を追加
+if [ ! -d $HOME/.config ]; then
+  mkdir $HOME/.config
+  chmod 755 $HOME/.config
+fi
 ln -svf $CURRENT_DIR $HOME/.config/
 
 # 下記で現在のconfigのパスの設定を確認出来る
