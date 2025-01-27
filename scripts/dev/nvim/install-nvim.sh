@@ -8,6 +8,10 @@ function settingProfile() {
   source $HOME/.zprofile
 }
 
+function settingProfileWithBash() {
+  source $HOME/.bash_profile
+}
+
 if [[ "$(nvim --version 2>/dev/null)" != "" ]]; then
   # インストール済みの場合
   echo "Alerady Installed."
@@ -47,7 +51,12 @@ ln -svf $CURRENT_DIR $HOME/.config/
 # 下記で現在のconfigのパスの設定を確認出来る
 # :echo stdpath('config')
 
-settingProfile
+# parameter check
+if [ "$1" == 'bash' ]; then
+  settingProfileWithBash
+else
+  settingProfile
+fi
 
 # 下記でnvim上でluaのスクリプトを実行出来る
 # :lua print("hello world")
