@@ -30,7 +30,7 @@ if [[ "$(uname -m)" == "arm64" ]]; then
   curl -LO https://github.com/neovim/neovim/releases/download/nightly/nvim-macos-arm64.tar.gz
   tar xzf nvim-macos-arm64.tar.gz
   # 解凍してからzipファイルはtmpディレクトリに移動
-  mv nvim-macos-arm64.tar.gz tmp/
+  mv nvim-macos-arm64.tar.gz /tmp/
 
   # /usr/localに移動
   sudo mv ./nvim-macos-arm64 /usr/local/
@@ -42,9 +42,13 @@ if [[ "$(uname -m)" == "arm64" ]]; then
 elif [[ "$(uname -m)" == "x86_64" ]]; then
   # x86_64の場合
   echo "Your uname -m is: x86_64."
-  curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
-  sudo rm -rf /opt/nvim
-  sudo tar -C /opt -xzf nvim-linux64.tar.gz
+  curl -LO https://github.com/neovim/neovim/releases/download/nightly/nvim-linux-x86_64.tar.gz
+  tar xzf nvim-linux-x86_64.tar.gz
+  mv nvim-linux-x86_64.tar.gz /tmp/
+
+  # /usr/localに移動
+  sudo mv ./nvim-linux-x86_64 /usr/local/
+  sudo ln -svf /usr/local/nvim-linux-x86_64/bin/nvim /usr/local/bin/
 else
   echo "No Target uname: " . $(uname -m)
   exit
