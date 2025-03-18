@@ -9,6 +9,10 @@ export NVM_DIR="$HOME/.nvm"
 # nvm use stable
 nvm use "$TARGET_NODE_VERSION"
 
+# example $PATH setting
+# export PATH="$HOME/.nvm/versions/node/v22.14.0/bin:$PATH"
+# export PATH="$HOME/.nvm/versions/node/v22.14.0/bin:$PATH"
+
 # huskyの設定ファイルの反映方法
 ### 複数階層のディレクトリを作成出来る
 # mkdir -p $HOME/.config/husky
