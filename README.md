@@ -54,9 +54,10 @@ chsh -s /bin/zsh
 ```shell
 cp $HOME/.bash_profile $HOME/path/dotfiles/
 cp $HOME/.bashrc $HOME/path/dotfiles/
-cp $HOME/.huskyrc $HOME/path/dotfiles/
+# cp $HOME/.huskyrc $HOME/path/dotfiles/ @deprecated
 cp $HOME/.tmux.conf $HOME/path/dotfiles/
 cp $HOME/.vimrc $HOME/path/dotfiles/
+cp $HOME/.config/hisky/init.sh $HOME/path/dotfiles/
 ```
 
 ---
