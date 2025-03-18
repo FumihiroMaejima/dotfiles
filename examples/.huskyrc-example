@@ -1,10 +1,9 @@
+TARGET_NODE_VERSION='22.14.0'
+
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-nvm use stable
-
-# echo "export PATH=\"$(dirname $(which npx)):\$PATH\"" > ~/.huskyrc
-# sourceTreeなど外部からgitを使う場合は以下も追加
-# echo "export PATH=\"$(dirname $(which yarn)):\$PATH\"" >> $HOME/.huskyrc
+# nvm use stable
+nvm use "$TARGET_NODE_VERSION"
 
 # huskyの設定ファイルの反映方法
 ### 複数階層のディレクトリを作成出来る
@@ -15,4 +14,9 @@ nvm use stable
 # ln -svf ~/path/dotfiles/.huskyrc $HOME/.config/husky/init.sh
 ### リンクを削除
 # unlink $HOME/.config/husky/init.sh
+
+# $PATH設定
+# echo "export PATH=\"$(dirname $(which npx)):\$PATH\"" >> $HOME/.config/husky/init.sh
+# sourceTreeなど外部からgitを使う場合は以下も追加
+# echo "export PATH=\"$(dirname $(which yarn)):\$PATH\"" >> $HOME/.config/husky/init.sh
 
