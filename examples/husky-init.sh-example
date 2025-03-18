@@ -1,3 +1,7 @@
+#!/bin/sh
+
+# Rename this file to `init.sh` & move repository root.
+
 TARGET_NODE_VERSION='22.14.0'
 
 export NVM_DIR="$HOME/.nvm"
@@ -11,8 +15,8 @@ nvm use "$TARGET_NODE_VERSION"
 ### ファイルを作成
 # touch $HOME/.config/husky/init.sh
 ### 又は
-# ln -svf ~/path/dotfiles/.huskyrc $HOME/.config/husky/init.sh
-### リンクを削除
+# ln -svf ~/path/dotfiles/husky-init.sh $HOME/.config/husky/init.sh
+### リンクを削除する場合
 # unlink $HOME/.config/husky/init.sh
 
 # $PATH設定

@@ -65,3 +65,4 @@ pnpm-debug.log*
 .zshrc
 .huskyrc
 .tmux.conf
+husky-init.sh
