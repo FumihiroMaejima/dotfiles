@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Rename this file to `init.sh` & move repository root.
+# Rename this file to `husky-init.sh` & move repository root.
 
 TARGET_NODE_VERSION='22.14.0'
 
