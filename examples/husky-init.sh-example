@@ -2,12 +2,9 @@
 
 # Rename this file to `husky-init.sh` & move repository root.
 
-TARGET_NODE_VERSION='22.14.0'
-
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-# nvm use stable
-nvm use "$TARGET_NODE_VERSION"
+nvm use stable
 
 # example $PATH setting
 # export PATH="$HOME/.nvm/versions/node/v22.14.0/bin:$PATH"
