@@ -237,6 +237,28 @@ origin  git@github.com:user_name/repository_name.git (push)
 
 ```
 
+
+# ローカルで新規作成したプロジェクトをgitリポジトリ化し、リモートリポジトリのURLの設定を追加(Unityなど)
+
+```shell
+# gitリポジトリ化
+git init
+Initialized empty Git repository in /path/to/project/.git/
+
+git add README.md
+git commit -m "first commit"
+
+# 初回実行時は何も表示されない。
+git remote -v
+
+# 設定を追加
+git remote add origin git@github.com:user_name/repository_name.git
+
+git remote -v
+origin  git@github.com:user_name/repository_name.git (fetch)
+origin  git@github.com:user_name/repository_name.git (push)
+```
+
 ---
 
 # git flow
