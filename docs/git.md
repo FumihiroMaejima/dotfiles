@@ -221,6 +221,17 @@ git config --global -l
 ```
 
 ---
+
+## メールアドレス設定の確認
+
+```shell
+git config --global user.email
+
+### GitHubの秘匿アドレスに書き換え
+git config --global user.email "xxx@users.noreply.github.com"
+```
+
+---
 # リモートリポジトリのURLチェック
 
 ```shell
