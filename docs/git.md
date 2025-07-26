@@ -102,6 +102,14 @@ git checkout -b feature/branch-name refs/tags/tagName
 
 ---
 
+# チェリーピック
+
+```shell
+git cherry-pick commid-id
+```
+
+---
+
 # rebase
 
 リベースされる対象のブランチを最新にして、変更が無い状態で下記のコマンドを実行されるとrebaseが実行される。
