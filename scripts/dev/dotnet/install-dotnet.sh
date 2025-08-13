@@ -12,11 +12,17 @@ DOTNET_DOWNLOAD_PATH=https://builds.dotnet.microsoft.com/dotnet/Sdk/9.0.304/dotn
 # sudo installer -pkg dotnet-installer.pkg -target /
 
 DOTNET_ROOT=$(which dotnet)
+echo "# for dotnet" >> ~/.zprofile
 echo "export DOTNET_ROOT=$DOTNET_ROOT" >> ~/.zprofile
 echo 'export PATH="$PATH:$DOTNET_ROOT"' >> ~/.zprofile
 
 # SDKのインストールパスのシンボリックリンクを設定
-# sudo ln -s /usr/local/share/dotnet/x64/dotnet /usr/local/bin
-ln -s /usr/local/share/dotnet/x64/dotnet /usr/local/bin
+# sudo ln -s /usr/local/share/dotnet/x64/dotnet /usr/local/bin/
+sudo ln -s /usr/local/share/dotnet/dotnet /usr/local/bin/
 
 source $HOME/.zprofile
+
+# 各種バージョン確認
+dotnet --version
+dotnet --list-sdks
+
