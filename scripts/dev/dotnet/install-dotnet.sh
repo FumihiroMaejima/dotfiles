@@ -16,7 +16,7 @@ echo "# for dotnet" >> ~/.zprofile
 echo "export DOTNET_ROOT=$DOTNET_ROOT" >> ~/.zprofile
 echo 'export PATH="$PATH:$DOTNET_ROOT"' >> ~/.zprofile
 
-# SDKのインストールパスのシンボリックリンクを設定
+# SDKのインストールパスのシンボリックリンクを設定(VSCodeなどから参照する為の設定)
 # sudo ln -s /usr/local/share/dotnet/x64/dotnet /usr/local/bin/
 sudo ln -s /usr/local/share/dotnet/dotnet /usr/local/bin/
 
