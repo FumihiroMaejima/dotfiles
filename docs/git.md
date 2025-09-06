@@ -234,8 +234,9 @@ git config --global -l
 
 ```shell
 git config --global user.email
+git config --global user.name
 
-### GitHubの秘匿アドレスに書き換え
+### GitHubの秘匿アドレスに書き換え(`user.name`にすると良い)
 git config --global user.email "xxx@users.noreply.github.com"
 ```
 
