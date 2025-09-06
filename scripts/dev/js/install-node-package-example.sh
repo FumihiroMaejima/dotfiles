@@ -48,4 +48,4 @@ changeNodeVersion "$PRE_NODE_VERSION" "$TARGET_NODE_VERSION"
 source $HOME/"$PROFILE_FILE_NAME"
 
 # パッケージのインストール(vの接頭辞をつける)
-$HOME/.nvm/versions/node/v$TARGET_NODE_VERSION/bin/npm install -g yarn typescript create-react-app @aws-amplify/cli aws-cdk @google/clasp
+$HOME/.nvm/versions/node/v$TARGET_NODE_VERSION/bin/npm install -g yarn typescript npm-check-updates create-react-app @aws-amplify/cli aws-cdk @google/clasp
