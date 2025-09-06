@@ -1,0 +1,27 @@
+#!/bin/sh
+
+# Rename this file to `husky-init.sh` & move repository root.
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+nvm use stable
+
+# example $PATH setting
+# export PATH="$HOME/.nvm/versions/node/v22.14.0/bin:$PATH"
+# export PATH="$HOME/.nvm/versions/node/v22.14.0/bin:$PATH"
+
+# huskyの設定ファイルの反映方法
+### 複数階層のディレクトリを作成出来る
+# mkdir -p $HOME/.config/husky
+### ファイルを作成
+# touch $HOME/.config/husky/init.sh
+### 又は
+# ln -svf ~/path/dotfiles/husky-init.sh $HOME/.config/husky/init.sh
+### リンクを削除する場合
+# unlink $HOME/.config/husky/init.sh
+
+# $PATH設定
+# echo "export PATH=\"$(dirname $(which npx)):\$PATH\"" >> $HOME/.config/husky/init.sh
+# sourceTreeなど外部からgitを使う場合は以下も追加
+# echo "export PATH=\"$(dirname $(which yarn)):\$PATH\"" >> $HOME/.config/husky/init.sh
+

@@ -7,14 +7,14 @@
 * Alpine LinuxのDockerコンテナでは値が設定されていない為注意。
 
 ```session
-$ echo $SHELL
+echo $SHELL
 /bin/zsh
 ```
 
 # shellsの確認
 
 ```session
-$ cat /etc/shells
+cat /etc/shells
 # List of acceptable shells for chpass(1).
 # Ftpd will not allow users to connect who are not using
 # one of these shells.
@@ -28,14 +28,14 @@ $ cat /etc/shells
 /bin/zsh
 ```
 
-```session
-$ which sh
+```shell
+which sh
 /bin/sh
 
-$ which bash
+which bash
 /bin/bash
 
-$ which zsh
+which zsh
 /bin/zsh
 ```
 
@@ -51,12 +51,13 @@ chsh -s /bin/zsh
 
 # ローカルのファイルをdotfilesリポジトリにコピーする場合
 
-```session
+```shell
 cp $HOME/.bash_profile $HOME/path/dotfiles/
 cp $HOME/.bashrc $HOME/path/dotfiles/
-cp $HOME/.huskyrc $HOME/path/dotfiles/
+# cp $HOME/.huskyrc $HOME/path/dotfiles/ @deprecated
 cp $HOME/.tmux.conf $HOME/path/dotfiles/
 cp $HOME/.vimrc $HOME/path/dotfiles/
+cp $HOME/.config/hisky/init.sh $HOME/path/dotfiles/
 ```
 
 ---
@@ -67,7 +68,7 @@ cp $HOME/.vimrc $HOME/path/dotfiles/
 - `-v` 経過を表示する
 - `-f` force,強制的に実行
 
-```session
+```shell
 ln -sv ~/path/dotfiles/.bashrc ~/
 # or
 ln -svf ~/path/dotfiles/.bashrc ~/
@@ -79,7 +80,7 @@ ls -la ~/
 
 # シンボリックリンクの削除
 
-```session
+```shell
 unlink ~/.bashrc
 ```
 
@@ -89,13 +90,13 @@ unlink ~/.bashrc
 
 PostManでファイルアップロードをする場合は専用のディレクトリに画像を格納する必要がある。
 
-```session
+```shell
 ln -svf /Users/userName/Postman/files ~/Desktop/sampleFiles
 /Users/userName/Desktop/sampleFiles/files -> /Users/userName/Postman/files
 
 ```
 
-```session
+```shell
 unlink ~/Desktop/sampleFiles/files
 ```
 

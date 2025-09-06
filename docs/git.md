@@ -93,6 +93,23 @@ git checkout -b feature/branch-name-b feature/branch-name-a
 ```
 
 ---
+
+# タグからブランチをチェックアウト
+
+```shell
+git checkout -b feature/branch-name refs/tags/tagName
+```
+
+---
+
+# チェリーピック
+
+```shell
+git cherry-pick commid-id
+```
+
+---
+
 # rebase
 
 リベースされる対象のブランチを最新にして、変更が無い状態で下記のコマンドを実行されるとrebaseが実行される。
@@ -212,6 +229,18 @@ git config --global -l
 ```
 
 ---
+
+## メールアドレス設定の確認
+
+```shell
+git config --global user.email
+git config --global user.name
+
+### GitHubの秘匿アドレスに書き換え(`user.name`にすると良い)
+git config --global user.email "xxx@users.noreply.github.com"
+```
+
+---
 # リモートリポジトリのURLチェック
 
 ```shell
@@ -237,6 +266,28 @@ origin  git@github.com:user_name/repository_name.git (push)
 
 ```
 
+
+# ローカルで新規作成したプロジェクトをgitリポジトリ化し、リモートリポジトリのURLの設定を追加(Unityなど)
+
+```shell
+# gitリポジトリ化
+git init
+Initialized empty Git repository in /path/to/project/.git/
+
+git add README.md
+git commit -m "first commit"
+
+# 初回実行時は何も表示されない。
+git remote -v
+
+# 設定を追加
+git remote add origin git@github.com:user_name/repository_name.git
+
+git remote -v
+origin  git@github.com:user_name/repository_name.git (fetch)
+origin  git@github.com:user_name/repository_name.git (push)
+```
+
 ---
 
 # git flow
@@ -253,6 +304,14 @@ git flow init
 git flow feature start branch-name
 # release
 git flow release start branch-name
+### 基準のブランチを指定してリリースブランチの作成
+git flow release start v1.0.0 develop
+### 全ての対応がマージされたらfinishを掛ける
+git flow release finish 'v1.0.0'
+#### 実行後に`main`,`develop`ブランチ両方にreleaseブランチがマージされる。
+#### タグはmain側に設定される。
+### releaseのpublishの実行
+git flow release publish v1.0.0
 # hotfix
 git flow hotfix start branch-name
 
